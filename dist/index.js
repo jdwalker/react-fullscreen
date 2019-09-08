@@ -74,7 +74,7 @@ var FullScreen = function (_Component) {
     key: "enterFullScreen",
     value: function enterFullScreen() {
       if (_fscreen2.default.fullscreenEnabled) {
-        _fscreen2.default.requestFullscreenFunction(this.node)({ navigationUI: props.navigationUI });
+        _fscreen2.default.requestFullscreenFunction(this.node)({ navigationUI: this.props.navigationUI });
       }
     }
   }, {
