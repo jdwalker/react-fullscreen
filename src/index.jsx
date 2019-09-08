@@ -7,10 +7,12 @@ class FullScreen extends Component {
     children: PropTypes.node.isRequired,
     enabled: PropTypes.bool.isRequired,
     onChange: PropTypes.func,
+    navigationUI: PropTypes.string.isRequired
   };
 
   static defaultProps = {
     enabled: false,
+    navigationUI: "auto"
   };
 
   constructor(props) {
@@ -48,7 +50,7 @@ class FullScreen extends Component {
 
   enterFullScreen() {
     if (fscreen.fullscreenEnabled) {
-      fscreen.requestFullscreen(this.node);
+      fscreen.requestFullscreenFunction(this.node)({navigationUI: props.navigationUI});
     }
   }
 
