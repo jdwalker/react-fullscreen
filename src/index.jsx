@@ -50,7 +50,7 @@ class FullScreen extends Component {
 
   enterFullScreen() {
     if (fscreen.fullscreenEnabled) {
-      fscreen.requestFullscreenFunction(this.node)({navigationUI: this.props.navigationUI});
+      fscreen.requestFullscreenFunction(this.node).bind(this.node)({navigationUI: this.props.navigationUI});
     }
   }
 
